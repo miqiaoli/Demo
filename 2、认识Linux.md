@@ -44,3 +44,23 @@
    1. `git remote add origin url`
    2. `git pull`
    3. `git push`
+4. 查询远程仓库地址：
+   1. `git remote -v`
+5. git错误信息：
+   ***
+   1. `git pull`  
+      `There is no tracking information for the current branch.`  
+      `Please specify which branch you want to merge with.`  
+      对于这种情况有两种解决办法，就比如说要操作master吧，一种是直接指定远程master：  
+      `git pull origin master`  
+      另外一种方法就是先指定本地master到远程的master，然后再去pull：  
+      `git branch --set-upstream-to=origin/master master`  
+      `git pull`  
+      这样就不会再出现“There is no tracking information for the current branch”这样的提示了。 
+      *** 
+   2. `refusing to merge unrelated histories`
+      该问题在 `merge`，`pull`,`push`中都会出现，在命令后加上`--allow-unrelated-histories`即可。  
+      例如：  
+      `git pull origin master --allow-unrelated-histories`
+
+
