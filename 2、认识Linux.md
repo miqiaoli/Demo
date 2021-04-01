@@ -44,13 +44,21 @@
    1. `git remote add origin url`
    2. `git pull`
    3. `git push`
-4. 查询远程仓库地址：
-   1. `git remote -v`
+4. 其他`git`命令：
+   1. `git remote -v` 查询远程仓库地址
+   2. `git branch -a` #查看所有分支
+   3. `git branch -r` #查看远程分支
+   4. `git branch -vv` #查看本地分支所关联的远程分支
+   5. `git branch -m old_branch new_branch` # Rename branch locally
+   6. `git push origin :old_branch` # Delete the old branch 
+   7. `git push --set-upstream origin new_branch` 或者`git push -u origin new_branch`# Push the new branch, set local branch to track the new remote
 5. git错误信息：
    ***
-   1. `git pull`  
-      `There is no tracking information for the current branch.`  
-      `Please specify which branch you want to merge with.`  
+   1. ```
+         git pull
+         There is no tracking information for the current branch. 
+         Please specify which branch you want to merge with.
+      ```
       对于这种情况有两种解决办法，就比如说要操作master吧，一种是直接指定远程master：  
       `git pull origin master`  
       另外一种方法就是先指定本地master到远程的master，然后再去pull：  
