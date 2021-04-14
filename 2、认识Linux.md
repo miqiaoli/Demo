@@ -52,7 +52,31 @@
    5. `git branch -m old_branch new_branch` # Rename branch locally
    6. `git push origin :old_branch` # Delete the old branch 
    7. `git push --set-upstream origin new_branch` 或者`git push -u origin new_branch`# Push the new branch, set local branch to track the new remote
-5. git错误信息：
+5. Git链接不上：
+   1. 查询可以用的IP
+      ip通过在https://www.ipaddress.com/上分别搜索
+      ```
+         github.com -> 140.82.114.3
+         github.global.ssl.fastly.net -> 199.232.69.194
+      ```
+   2. 更改host文件
+      ```
+      #mac host地址：/etc/host
+      #sudo vim host
+      WINDOWS host地址： C:\Windows\System32\Drivers\etc\hosts
+      140.82.114.3 github.com 
+      199.232.69.194 github.global.ssl.fastly.net
+      ```
+   3. 激活
+      ```
+         #大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
+         Windows：在 CMD 窗口输入：ipconfig /flushdns
+         Linux 命令：sudo rcnscd restart
+         Mac 命令：sudo killall -HUP mDNSResponder
+         Tips： 上述方法无效可以尝试重启机器。
+      ```
+
+1. git错误信息：
    ***
    1. ```
          git pull
