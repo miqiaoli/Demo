@@ -61,7 +61,7 @@
       ```
    2. 更改host文件
       ```
-      #mac host地址：/etc/host
+      #mac host地址：/etc/hosts
       #sudo vim host
       WINDOWS host地址： C:\Windows\System32\Drivers\etc\hosts
       140.82.114.3 github.com 
