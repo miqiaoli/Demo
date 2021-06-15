@@ -96,3 +96,25 @@
       `git pull origin master --allow-unrelated-histories`
 
 
+
+## 四. node操作：
+### 1. 准备
+   1. 查看node版本
+   `node -v`
+   2. 查看npm版本
+   `npm -v`
+
+### 2. 安装
+   1. 使用全局，安装`n` 
+   `sudo npm i -g n`
+   2. 查看`n`是否安装完成
+   `n -V`
+
+### 3. 安装与切换node版本
+   1. 列出所有node版本 `n ls`
+   2. 安装某个版本 `n xx.xx.x (xx.xx.x 为要安装的版本号)`
+   3. 安装最新版本 `n lastest`
+   4. 安装最新稳定版 `n stable`
+   5. 切换node版本(输入命令后上下键盘选择确认) `n`
+   6. 删除某个版本 `n rm xx.xx.x`
+   7. 使用某个版本来运行脚本 `n use xx.xx.x a.js`
